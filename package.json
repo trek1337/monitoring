@@ -1,0 +1,31 @@
+{
+  "name": "rust-server-monitor",
+  "version": "1.0.0",
+  "description": "Современный мониторинг серверов Rust с аутентификацией через Steam",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "npm run build:backend && npm run build:frontend",
+    "build:backend": "cd backend && npm run build",
+    "build:frontend": "cd frontend && npm run build",
+    "start": "cd backend && npm run start"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "rust",
+    "server",
+    "monitoring",
+    "steam",
+    "gaming"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+} 
